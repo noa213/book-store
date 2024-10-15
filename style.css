@@ -1,190 +1,130 @@
-/* Overall styles */
 body {
-    font-family: 'Montserrat', sans-serif;
-    /* Modern and clean font */
-    background-color: #f8f8f8;
-    /* Light background color */
-    color: #333;
-    /* Dark text color */
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #343a40;
     margin: 0;
-    display: flex;
-    /* Center content horizontally */
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    /* Set minimum height for viewport */
-    display: flex;
-    flex-direction: column;
-    /* מארגן את האלמנטים אנכית */
-    align-items: center;
-
-}
-
-/* Container for the book library app */
-#container {
-    width: 80%;
-    /* Set width for the container */
-    max-width: 1000px;
-    /* Set maximum width for responsiveness */
-    margin: 20px auto;
-    /* Add margin for spacing */
     padding: 20px;
-    /* Add padding for content */
-    border-radius: 5px;
-    /* Add subtle rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Add a slight shadow */
 }
 
-/* Table styles */
+h1 {
+    text-align: center;
+    color: #ff6f61;
+    margin-bottom: 20px;
+    font-size: 3.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+#container:hover {
+    transform: translateY(-5px);
+}
+
+.btns {
+    text-align: center;
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4c3b;
+    transform: scale(1.05);
+}
+
 table {
     width: 100%;
-    /* Set table to full width */
     border-collapse: collapse;
-    /* Remove borders between cells */
-    background-color: #fff;
-    /* Set white background for the table */
+    margin-top: 20px;
 }
 
 th,
 td {
-    border: 1px solid #ddd;
-    /* Add thin borders to cells */
     padding: 15px;
-    /* Add padding for content */
     text-align: left;
-    /* Align text to the left */
-    border: none;
-    /* מסיר את הגבולות הפנימיים */
-    width: auto;
+    border-bottom: 1px solid #dee2e6;
 }
 
 th {
-    background-color: #f2f2f2;
-    /* Light gray background for headers */
+    background-color: #f8f9fa;
     font-weight: bold;
-    /* Make headers bolder */
+    text-align: center;
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-    /* Light gray background for even rows */
+tr:hover {
+    background-color: #ffe6e6;
 }
 
-/* Styles for buttons */
-.read-btn,
-.update-btn,
-.remove-btn {
-    background-color: #4caf50;
-    /* Green color for buttons */
-    color: white;
-    /* White text color */
-    padding: 10px 20px;
-    /* Add padding for buttons */
-    border: none;
-    /* Remove borders */
-    border-radius: 5px;
-    /* Add rounded corners */
-    cursor: pointer;
-    /* Change cursor to pointer on hover */
-    transition: all 0.3s ease-in-out;
-    /* Add smooth transitions */
-    margin-right: 5px;
-    /* Add some margin between buttons */
-    font-size: inherit;
-    /* Inherit font size from parent element */
-    font-family: inherit;
-    /* Inherit font family from parent element */
-
+.details-card,
+#update-form,
+#add-form,
+.book-table {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
 }
 
-.read-btn:hover,
-.update-btn:hover,
-.remove-btn:hover {
-    background-color: #3e8e41;
-    /* Darker green on hover */
-}
-
-.remove-btn {
-    background-color: #f44336;
-    /* Red color for remove button */
-}
-
-.remove-btn:hover {
-    background-color: #da291c;
-    /* Darker red on hover */
-}
-
-/* Details card styles */
 .details-card,
 #update-form,
 #add-form {
-    background-color: #f2f2f2;
-    /* Light gray background */
-    padding: 20px;
-    /* Add padding for content */
+    background: #f9f9f9;
     border-radius: 10px;
-    /* Add rounded corners */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-    /* Add a subtle shadow */
-    position: absolute;
-    /* Position the details card absolutely */
-    top: 50%;
-    /* Center the card vertically */
-    left: 50%;
-    /* Center the card horizontally */
-    transform: translate(-50%, -50%);
-    /* Translate the card to its position */
-    width: 400px;
-    /* Set a fixed width for the card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
     z-index: 10;
-    /* Set the card to be on top of other elements */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    z-index: 10;
 }
 
-.details-card h2 {
-    margin-bottom: 15px;
-    /* Add some margin below the title */
+input[type="text"],
+input[type="range"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
 }
 
-.details-card img {
+input[type="text"]:focus,
+input[type="range"]:focus {
+    border-color: #ff6f61;
+    outline: none;
+}
+
+label {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+#close-details,
+#save-update,
+#add-new {
     width: 100%;
-    /* Set image to full width */
-    height: auto;
-    /* Maintain image aspect ratio */
-    margin-bottom: 10px;
-    /* Add some margin below the image */
-}
-
-
-
-
-
-
-
-
-.book-table tr:nth-child(even) {
-    background-color: #fafafa;
-    /* Alternate row background color with a slight difference */
-}
-
-.book-table tr:hover {
-    /* Add hover effect for a touch of interactivity */
-    background-color: #eee;
-}
-
-#new-book-btn {
-    background-color: #2ECC71;
-    /* Green color from the image */
-    color: white;
-    /* White text color */
-    padding: 10px 20px;
-    /* Padding for spacing */
-    border: none;
-    /* Remove default button border */
-    border-radius: 5px;
-    /* Add some rounded corners */
-    font-weight: bold;
-    /* Make text bold */
-    cursor: pointer;
-    /* Add hover effect for interactivity */
 }

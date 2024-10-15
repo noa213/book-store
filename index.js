@@ -24,7 +24,6 @@ function getBooks(sortBy = null) {
     `;
 
     table.appendChild(header);
-    // header.querySelector('.sort-title').addEventListener('click', () => getBooks('title'));
 
     books.forEach(book => {
         const card = document.createElement('tr');
@@ -65,7 +64,7 @@ function showBookDetails(book) {
     const detailsCard = document.createElement('div');
     detailsCard.classList.add('details-card');
     detailsCard.innerHTML = `
-        <h2>פרטי הספר</h2>
+        <h1>Book Details</h1>
         <p><strong>Id:</strong> ${book.id}</p>
         <p><strong>Title:</strong> ${book.title}</p>
         <p><strong>Price:</strong> ${book.price} $</p>

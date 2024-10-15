@@ -1,16 +1,39 @@
 {
     "books": [
         {
-            "id": 1,
-            "title": "all",
-            "price": 99.99,
-            "coverImageUrl": "../img/na.png"
+            "id": "1",
+            "title": "The Very Hungry Caterpillar",
+            "price": "7.99",
+            "img": "../img/the-very-hungry-caterpillar.png",
+            "rating": "5"
         },
         {
-            "id": 2,
-            "title": "1984",
-            "price": 79.99,
-            "coverImageUrl": "../img/na.png"
+            "id": "2",
+            "title": "Where the Wild Things Are",
+            "price": "9.99",
+            "img": "../img/where-the-wild-things-are.png",
+            "rating": "4"
+        },
+        {
+            "id": "3",
+            "title": "Charlotte's Web",
+            "price": "8.99",
+            "img": "../img/charlottes-web.png",
+            "rating": "5"
+        },
+        {
+            "id": "4",
+            "title": "The Cat in the Hat",
+            "price": "6.99",
+            "img": "../img/the-cat-in-the-hat.png",
+            "rating": "4"
+        },
+        {
+            "id": "5",
+            "title": "Goodnight Moon",
+            "price": "5.99",
+            "img": "../img/goodnight-moon.png",
+            "rating": "5"
         }
     ]
 }
