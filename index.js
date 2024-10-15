@@ -70,10 +70,9 @@ function showBookDetails(book) {
         <p><strong>Price:</strong> ${book.price} $</p>
         <p><strong>Cover Image:</strong></p>
         <img src="${book.img}" alt="${book.title} cover" style="width:100px; height:auto;">
-        <p><strong>Rating:</strong> <span id="book-rating">${book.rating || 'לא דירוג'}</span></p>
-        <label for="rating-slider">דרג את הספר:</label>
+        <p><strong>Rating:</strong> <span id="book-rating">${book.rating || 'no rating'}</span></p>
         <input type="range" id="rating-slider" min="1" max="5" value="${book.rating || 1}" step="1">
-        <button id="close-details">סגור</button>
+        <button id="close-details">close</button>
     `;
     container.appendChild(detailsCard);
     document.getElementById('rating-slider').addEventListener('input', function () {
