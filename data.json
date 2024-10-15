@@ -1,0 +1,16 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": "all",
+            "price": 99.99,
+            "coverImageUrl": "../img/na.png"
+        },
+        {
+            "id": 2,
+            "title": "1984",
+            "price": 79.99,
+            "coverImageUrl": "../img/na.png"
+        }
+    ]
+}
